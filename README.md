@@ -29,3 +29,5 @@ bundle exec jekyll serve
 ```
 
 Open `http://localhost:4000/thoughts/`.
+
+Dependencies are installed into `vendor/bundle` inside this project, as configured in `.bundle/config`. Do not use `sudo` for `bundle install` or Jekyll commands.

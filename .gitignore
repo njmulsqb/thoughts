@@ -1,4 +1,7 @@
 _site/
+.jekyll-cache.stale-owned*/
+_site.stale-owned*/
+_site.sandbox-owned*/
 .jekyll-cache/
 .sass-cache/
 .jekyll-metadata
