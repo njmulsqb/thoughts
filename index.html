@@ -1,0 +1,21 @@
+---
+layout: default
+title: ""
+---
+<section class="thoughts" aria-label="Latest thoughts">
+  {% for post in site.posts %}
+    <article class="thought">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+      {% if post.title and post.title != "" %}
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      {% endif %}
+      <div class="thought-body">
+        {{ post.content }}
+      </div>
+      {% if post.tags and post.tags.size > 0 %}
+        <p class="tags">{% for tag in post.tags %}<span>#{{ tag }}</span>{% endfor %}</p>
+      {% endif %}
+      <a class="permalink" href="{{ post.url | relative_url }}" aria-label="Permanent link to this thought">Permalink</a>
+    </article>
+  {% endfor %}
+</section>

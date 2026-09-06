@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    <title>{% if page.title and page.title != '' %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
+    <main class="page">
+      <header class="site-header">
+        <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <p class="site-description">{{ site.description }}</p>
+        <nav aria-label="Main navigation">
+          <a href="{{ '/' | relative_url }}">Thoughts</a>
+          <span aria-hidden="true">·</span>
+          <a href="{{ '/archive/' | relative_url }}">Archive</a>
+          <span aria-hidden="true">·</span>
+          <a href="{{ '/about/' | relative_url }}">About</a>
+        </nav>
+      </header>
+
+      {{ content }}
+    </main>
+  </body>
+</html>

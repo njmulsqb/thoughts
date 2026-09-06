@@ -1,0 +1,24 @@
+title: Thoughts
+description: Notes on Islam, technology, privacy, business and life.
+url: "https://njmulsqb.github.io"
+baseurl: "/thoughts"
+lang: en
+timezone: Asia/Karachi
+
+permalink: /:year/:month/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: thought
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
